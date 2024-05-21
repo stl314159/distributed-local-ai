@@ -1,0 +1,64 @@
+model_list:
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://officedev.tail04b9d.ts.net:8000/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://officedev.tail04b9d.ts.net:8001/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu01.tail04b9d.ts.net:8000/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu01.tail04b9d.ts.net:8001/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu02.tail04b9d.ts.net:8000/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu02.tail04b9d.ts.net:8001/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu03.tail04b9d.ts.net:8000/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu03.tail04b9d.ts.net:8001/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu04.tail04b9d.ts.net:8000/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu04.tail04b9d.ts.net:8001/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu05.tail04b9d.ts.net:8000/v1"
+      api_key: "sk-1234"
+  - model_name: Meta-Llama-3-8B-Instruct
+    litellm_params:
+      model: openai/meta-llama/Meta-Llama-3-8B-Instruct
+      api_base: "http://op4gpu05.tail04b9d.ts.net:8001/v1"
+      api_key: "sk-1234"
+router_settings:
+  redis_host: redis
+  redis_port: 6379

@@ -1,0 +1,43 @@
+version: "3"
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+      - ./data/redis/log:/var/log/redis
+    command: --requirepass ${REDIS_PASSWORD}
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./conf/litellm/:/app/
+    command:
+      ["--config", "/app/config.yaml", "--port", "4000"]
+      # ["--config", "/app/config.yaml", "--port", "4000", "--num_workers", "8"]
+    environment:
+      LITELLM_MASTER_KEY: "${LITELLM_MASTER_KEY}"
+      UI_USERNAME: "${LITELLM_UI_USERNAME}"
+      UI_PASSWORD: "${LITELLM_UI_PASSWORD}"
+      DATABASE_URL: "${DATABASE_URL}"
+    ulimits:
+      nofile:
+        soft: "65536"
+        hard: "65536"
